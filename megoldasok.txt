@@ -1,0 +1,39 @@
+﻿A feladatok megoldására elkészített SQL parancsokat illessze be a feladat sorszáma után!
+
+
+1. feladat:
+
+
+3. feladat:
+SELECT 
+	versenyzok.nev
+	FROM
+    versenyzok
+    WHERE versenyzok.korcsop = 'A'
+    ORDER BY 
+    nev ASC
+
+
+4. feladat:
+SELECT
+	eredmenyek.versenyzo
+    FROM eredmenyek
+    WHERE 
+    eredmenyek.ures > 0
+    GROUP BY
+    eredmenyek.versenyzo;
+
+5. feladat:
+
+SELECT 
+	versenyzok.nev,
+    avg(eredmenyek.tarolas) as atlagpont
+    FROM versenyzok INNER JOIN eredmenyek
+    ON versenyzok.rajtszam = eredmenyek.versenyzo
+    GROUP BY versenyzok.nev
+    ORDER BY atlagpont DESC
+6. feladat:
+
+
+7. feladat:
+
